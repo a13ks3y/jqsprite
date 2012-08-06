@@ -2,7 +2,7 @@ jQuery plugin for sprite animation.
 
 # How to use it
 
-    $('any-selector').sprite({
+    $('some-selector').sprite({
             // descriptor
             sprite: {
                 image: "path_to.image",
@@ -42,16 +42,16 @@ jQuery plugin for sprite animation.
         }
     );
 
-    $('any-selector').sprite('pause');
-    $('any-selector').sprite('stop');
-    $('any-selector').sprite('play');
+    $('some-selector').sprite('pause');
+    $('some-selector').sprite('stop');
+    $('some-selector').sprite('play');
 
-    $('any-selector').trigger('pause');
-    $('any-selector').trigger('stop');
-    $('any-selector').trigger('play');
+    $('some-selector').trigger('pause');
+    $('some-selector').trigger('stop');
+    $('some-selector').trigger('play');
 
 
-    $('any-selector').trigger('animation', 'nameOfAnimation');
+    $('some-selector').trigger('animation', 'nameOfAnimation');
 
     // On frame changed
     $('.sprite').bind('nextFrame', function(event, frame) {
