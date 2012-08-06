@@ -2,8 +2,7 @@ jQuery plugin for sprite animation.
 
 # How to use it
 
-    $('any-selector').sprite(
-        {
+    $('any-selector').sprite({
             // descriptor
             sprite: {
                 image: "path_to.image",
