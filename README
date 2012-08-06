@@ -1,0 +1,86 @@
+jQuery plugin for sprite animation.
+
+# How to use it
+
+	$('any-selector').sprite(
+		{
+			// descriptor
+			sprite: {
+				image: "path_to.image",
+				framesets: {
+					myFirstFrameset: {
+						// frame with
+						width		: 192,
+						// frame height
+						height		: 228,
+						// sprite left offset
+						x			: 0,
+						// sprite top offset
+						y			: 0,
+						// number of frames (it do nothing, just for clear)
+						frames		: 20
+					}
+				},
+				// Animation
+				animations: {
+					'myFirstAnimation': {
+						// Wich frameset will we use
+						frameset: 'myFirstFrameset',
+						// Frames sequence
+						frames	: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+					}
+				}
+			},
+			// Additional params
+			x			: 0,
+			y			: 0,
+			loop		: true,
+			// paused false will run sprite immediately if animation is set
+			paused		: false,
+			// wich animation use
+			animation	: 'attack',
+			fps			: 12
+		}
+	);
+
+	$('any-selector').sprite('pause');
+	$('any-selector').sprite('stop');
+	$('any-selector').sprite('play');
+
+	$('any-selector').trigger('pause');
+	$('any-selector').trigger('stop');
+	$('any-selector').trigger('play');
+
+
+	$('any-selector').trigger('animation', 'nameOfAnimation');
+
+	// On frame changed
+    $('.sprite').bind('nextFrame', function(event, frame) {
+        //@todo: code here
+    });
+
+    // Animation begun (first frame in current animation sequence)
+    $('.sprite').bind('begun', function() {
+        //@todo: code here
+    });
+
+    // Animation finished (last frame in current animation sequence)
+    $('.sprite').bind('finished', function() {
+        //@todo: code here
+    });
+
+    // Animation begun or continue playing
+    $('.sprite').bind('started', function(event, frame) {
+        //@todo: code here
+    });
+
+    // Animation stopped
+    $('.sprite').bind('stopped', function(event, frame) {
+        //@todo: code here
+    });
+
+    // Remove all sprite data and attributes
+    $('.sprite').trigger('destroy'});
+
+    // Remove all sprite data and attributes and remove all sprite dom elements
+    $('.sprite').trigger('destroy', true);
