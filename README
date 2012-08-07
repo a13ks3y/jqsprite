@@ -79,7 +79,7 @@ jQuery plugin for sprite animation.
     });
 
     // Remove all sprite data and attributes
-    $('.sprite').trigger('destroy'});
+    $('.sprite').trigger('destroy');
 
     // Remove all sprite data and attributes and remove all sprite dom elements
     $('.sprite').trigger('destroy', true);
