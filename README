@@ -83,3 +83,10 @@ jQuery plugin for sprite animation.
 
     // Remove all sprite data and attributes and remove all sprite dom elements
     $('.sprite').trigger('destroy', true);
+
+# Licence 
+    MIT. You can use and change it how you wish. AN I will be glad if you'll add my name as author :)
+
+# Additional
+    Be free to commit with bug fixes!
+    
